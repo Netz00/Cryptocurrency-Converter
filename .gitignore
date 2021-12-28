@@ -1,0 +1,4 @@
+deployment/mysql/*
+!deployment/mysql/dummyfile
+html/admin/page.invoices.inc.php
+diagrams

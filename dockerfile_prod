@@ -1,0 +1,38 @@
+FROM php:7.3.28-apache
+
+ARG APCU_VERSION=5.1.11
+
+
+RUN docker-php-ext-install mysqli pdo pdo_mysql
+
+# Install APCu and APC backward compatibility
+RUN pecl install apcu-5.1.21 \
+    && docker-php-ext-enable apcu --ini-name 10-docker-php-ext-apcu.ini
+
+RUN a2enmod ssl &&\
+    a2enmod rewrite
+
+# Copy source
+COPY . /var/www/html/
+
+# Append text to file
+RUN cat /var/www/html/deployment/ssl/apache2.conf >> /etc/apache2/apache2.conf
+
+RUN cat /var/www/html/deployment/ssl/000-default.conf  >> /etc/apache2/sites-enabled/000-default.conf
+
+# Create certificate
+RUN mkdir /etc/apache2/certificate &&\
+    cd /etc/apache2/certificate &&\
+    openssl req -new -newkey rsa:4096 -x509 -sha256 -days 365 -nodes -out apache-certificate.crt -keyout apache.key -config /var/www/html/deployment/ssl/openssl.cnf
+
+
+RUN service apache2 restart
+
+
+RUN php --ini
+RUN php --info | grep apc
+
+
+EXPOSE 80
+EXPOSE 443
+
