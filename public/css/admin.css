@@ -1,0 +1,93 @@
+#mainNav {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 500;
+    background-color:rgb(55, 55, 187);
+  }
+  #mainNav .navbar-brand {
+    color: #fff;
+  }
+  #mainNav .navbar-nav {
+    margin-top: 1rem;
+  }
+  #mainNav .navbar-nav li.nav-item a.nav-link {
+    color: #fff;
+  }
+  #mainNav .navbar-nav li.nav-item a.nav-link:hover {
+    color: #6C757D;
+  }
+  #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
+    color: #fff;
+  }
+  #mainNav .navbar-nav li.nav-item a.nav-link.active {
+    color: #1abc9c;
+  }
+  #mainNav .navbar-toggler {
+    font-size: 80%;
+    padding: 0.8rem;
+    color: #1ABC9C;
+  }
+  
+  
+  #mainNav .navbar-nav li.nav-item a.nav-link a:hover{
+    color: #000;
+  }
+  
+  ul.nav a:hover { color: #000 !important; }
+  
+  
+  
+  
+  @media (min-width: 992px) {
+    #mainNav {
+      padding-top: 0.1rem;
+      padding-bottom: 0.1rem;
+      transition: padding-top 1.3s, padding-bottom 1.3s;
+    }
+    #mainNav .navbar-brand {
+      font-size: 1.75em;
+      transition: font-size 0.3s;
+    }
+    #mainNav .navbar-nav {
+      margin-top: 0;
+    }
+    #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
+      color: #fff;
+      background: #1abc9c;
+    }
+    #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
+      color: rgb(104, 102, 102);
+      background: #1abc9c;
+    }
+  
+    #mainNav.navbar-shrink {
+      padding-top: 0.1rem;
+      padding-bottom: 0.1rem;
+    }
+    #mainNav.navbar-shrink .navbar-brand {
+      font-size: 1.75em;
+    }
+  }
+
+
+
+table, th, td {
+  border: 2px solid rgb(0, 0, 0);
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th{
+
+  background-color:#dbdbff;
+}
+
+th, td {
+  padding: 5px;
+}
