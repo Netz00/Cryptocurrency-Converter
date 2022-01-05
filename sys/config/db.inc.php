@@ -34,7 +34,6 @@ $C['ERROR_SUCCESS'] = 0;
 $C['ERROR_UNKNOWN'] = 100;
 $C['ERROR_ACCESS_TOKEN'] = 101;
 $C['COULDNT_GET_KEY_FROM_CACHE'] = 102; // vjerovatno je spremljen krivi keyword u cache il nije spremljen uopce
-$C['ERROR_INVOICE_DOESNT_EXIST'] = 103;
 $C['API_CONNECTION_FAILED'] = 104;      // probably api endpoint is unavailable
 
 $C['ERROR_LOGIN_TAKEN'] = 300;
@@ -51,10 +50,6 @@ $C['USER_LOGIN_SUCCESSFULLY'] = 5;
 $C['EMPTY_DATA'] = 6;
 $C['ERROR_API_KEY'] = 7;
 
-$C['INVOICE_STATE_ACTIVE'] = 0;
-$C['INVOICE_STATE_EXPIRED'] = 1;
-$C['INVOICE_STATE_CANCELED'] = 2;
-$C['INVOICE_STATE_PROCESSED'] = 3;
 
 
 $LANGS = array();
